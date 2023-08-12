@@ -116,7 +116,7 @@ exports.getDashboardPage = async (req, res, next) => {
 
 exports.getMapPage = async (req, res, next) => {
   userLocation();
-  res.render("map");
+  res.render("map", { google_maps_api: process.env.GOOGLE_MAPS_API });
 };
 exports.getMessagesPage = async (req, res, next) => {
   res.render("messages");
